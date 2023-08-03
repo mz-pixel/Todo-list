@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs') %>
+    <form>
+        <input type="checkbox" id="first-box" onchange="foo()">
+        <script>
+            function foo() {
+                document.getElementById("first-text").classList.toggle("checked");
+            }
+        </script>
+        <label for="first-box" id="first-text">This is the first box</label>
+        <input type="checkbox" id="second-box" onchange="fool()">
+        <script>
+            function fool() {
+                document.getElementById("second-text").classList.toggle("checked");
+            }
+        </script>
+        <label for="first-box" id="second-text">This is the second box</label>
+        <input type="checkbox" id="third-box" onchange="fooll()">
+        <script>
+            function fooll() {
+                document.getElementById("third-text").classList.toggle("checked");
+            }
+        </script>
+        <label for="first-box" id="third-text">This is the first box</label>
+    </form>
+    <form class="form-inline my-2 my-md-0" action="/" method="POST">
+        <input class="form-control" type="text" placeholder="Enter task" onclick="foo()" name="input">
+    </form>
+    <%- include('partials/footer.ejs') %>
