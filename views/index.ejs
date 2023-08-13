@@ -1,28 +1,23 @@
 <%- include('partials/header.ejs') %>
-    <form>
-        <input type="checkbox" id="first-box" onchange="foo()">
-        <script>
-            function foo() {
-                document.getElementById("first-text").classList.toggle("checked");
-            }
-        </script>
-        <label for="first-box" id="first-text">This is the first box</label>
-        <input type="checkbox" id="second-box" onchange="fool()">
-        <script>
-            function fool() {
-                document.getElementById("second-text").classList.toggle("checked");
-            }
-        </script>
-        <label for="first-box" id="second-text">This is the second box</label>
-        <input type="checkbox" id="third-box" onchange="fooll()">
-        <script>
-            function fooll() {
-                document.getElementById("third-text").classList.toggle("checked");
-            }
-        </script>
-        <label for="first-box" id="third-text">This is the first box</label>
-    </form>
-    <form class="form-inline my-2 my-md-0" action="/" method="POST">
-        <input class="form-control" type="text" placeholder="Enter task" onclick="foo()" name="input">
-    </form>
+    <div class="container-sm"
+        style="border-radius: 30px; background-color:blanchedalmond; padding: 1%; padding-bottom: 2%; padding-top: 2%; max-width: 540px; margin-top: 50px; margin-bottom: 50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <h1>
+            <%= type %>
+        </h1>
+        <% if (locals.list) { %>
+            <% for( let i in list ) { %>
+                <div class="separate-div sep">
+                    <input type="checkbox">
+                    <label class="text">
+                        <%= list[i] %>
+                    </label>
+                </div>
+                <% } %>
+                    <% } %>
+                        <form class="form-outline my-2 my-md-0" action="/" method="POST">
+                            <input class="form-control" type="text" name="input" placeholder="Enter task">
+                            <button type="submit" class="btn btn-dark" name="something"><i
+                                    class="fa fa-check"></i>Submit</button>
+                        </form>
+    </div>
     <%- include('partials/footer.ejs') %>

@@ -1,3 +1,118 @@
-.checked {
+* {
+  font-family: "popins", sans-serif;
+}
+body {
+  background: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+html {
+  background: linear-gradient(135deg, white, #eada9f);
+  height: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.seperate-div {
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sep {
+  width: 100%;
+}
+input:checked + label {
   text-decoration: line-through;
+  text-decoration-color: #5805ff;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
+}
+.container {
+  width: fit-content;
+}
+.footer {
+  margin-top: auto;
+}
+div > input {
+  margin: 10px;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+input[type="checkbox"]::before {
+  background-color: rgb(80, 0, 218);
+}
+.sep {
+  display: flex;
+}
+input[type="checkbox"] {
+  margin: 0.5rem;
+}
+.text {
+  margin: 0.5rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+svg {
+  color: #674188;
+}
+a {
+  color: #674188;
+}
+nav {
+  background: linear-gradient(4deg, white, #eada9f);
+}
+input[type="text"] {
+  width: 100px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  transition: width 0.4s ease-in-out;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input[type="text"]:focus {
+  width: 80%;
+}
+button {
+  width: 20%;
 }
