@@ -5,12 +5,14 @@
             About
         </h1>
         <p>This project was made using HTML, CSS, Javascript, express and ejs while I was taking a course to become a
-            full stack web developer. Please feel free to give me suggestions and do checkout my github for other fun
+            full stack web developer. It is constantly being updated. Please feel free to give me suggestions and do
+            checkout my github for other fun
             projects. Thanks You!</p>
 
 
-        <form class="form-outline my-2 my-md-0" action="/" method="POST">
-            <input class="form-control" type="text" name="input" placeholder="Suggestions are welcome">
+        <form class="form-outline my-2 my-md-0" action="/about" method="get">
+            <input class="form-control" type="text" name="input" placeholder="Suggestions are welcome"
+                style="width: 100% !important; transition: none !important;">
         </form>
     </div>
     <%- include('partials/footer.ejs') %>

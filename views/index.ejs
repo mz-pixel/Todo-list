@@ -6,17 +6,20 @@
         </h1>
         <% if (locals.list) { %>
             <% for( let i in list ) { %>
-                <div class="separate-div sep">
-                    <input type="checkbox">
-                    <label class="text">
-                        <%= list[i] %>
-                    </label>
-                </div>
+                <form action="/delete" method="post">
+                    <div class="separate-div sep">
+                        <input type="checkbox" name="checkbox" onChange="this.form.submit()" value="<%= list[i]._id %>">
+                        <label class="text">
+                            <%= list[i].task %>
+                        </label>
+                    </div>
+                    <input type="hidden" name="hidden" value="<%= type %>">
+                </form>
                 <% } %>
                     <% } %>
                         <form class="form-outline my-2 my-md-0" action="/" method="POST">
                             <input class="form-control" type="text" name="input" placeholder="Enter task">
-                            <button type="submit" class="btn btn-dark" name="something"><i
+                            <button type="submit" class="btn btn-dark" name="something" value="<%= type %>"><i
                                     class="fa fa-check"></i>Submit</button>
                         </form>
     </div>
