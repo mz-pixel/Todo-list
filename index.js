@@ -115,7 +115,6 @@ async function connectToMongoDB() {
     app.post("/", async (req, res) => {
       const newTask = req.body["input"];
       const listN = await req.body.something;
-      console.log(listN);
       const listName = _.capitalize(listN);
       if (listName === "Today") {
         const result = await db
