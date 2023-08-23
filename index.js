@@ -5,11 +5,11 @@ import bodyParser from "body-parser";
 import { MongoClient, ServerApiVersion } from "mongodb";
 import { ObjectId } from "mongodb";
 import _ from "lodash";
+import dotenv from "dotenv/config";
 
 const app = express();
 const PORT = 3000;
-const url =
-  "mongodb+srv://zaminjamalzj:hekpnxjISdk3q9Oe@cluster0.bnrho8k.mongodb.net/todolistDB";
+const url = process.env.DB_URL;
 
 let TodaylistOfTask;
 
